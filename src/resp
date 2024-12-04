@@ -1,0 +1,100 @@
+
+        {/*<div className='flex w-full gap-3'>
+          <div className='flex flex-col gap-3 border-0 border-white'>
+            <div className='flex flex-col justify-around px-3 h-full border-[1px] border-gray-50/10 bg-[#1d1e20] rounded-md'>
+              {Array.from({ length: (endTime - startTime + 1) }, (v, i) => (
+                <div key={i} className=''>
+                  <span>{i + parseInt(startTime)}: 00</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className='flex flex-col gap-3 border-0 border-white'>
+            {Array.from({ length: (endTime - startTime + 1) * 2 }, (v, i) => (
+              <div key={i} className=''>
+
+                {!findTask(i + parseInt(startTime)) ?
+                  <Block className={`transition-all duration-300 delay-300 ease-in-out ${blockData[i]?.status === 'editing' ? 'h-32' : 'h-[52px]'}`} color={blockData[i]?.color || 'gray'}>
+
+                    <div className={`absolute flex flex-col transition-opacity duration-300 delay-300 ease-in-out ${clickedBlocks[i] ? 'opacity-100 z-20' : 'opacity-0 invisible'}`}>
+                      <textarea
+                        ref={textareaRef}
+                        type="text"
+                        className={`${blockData[i]?.status !== 'saved' ? '' : 'bg-opacity-80 cursor-pointer'} px-2 py-1 rounded-md focus:outline-none bg-[#1a1a1a]  border-[#1a1a1a]`}
+                        value={blockData[i]?.text || ''}
+                        disabled={blockData[i]?.status === 'saved'}
+                        onChange={(e) => setBlockData({ ...blockData, [i]: { ...blockData[i], text: e.target.value } })}
+                      />
+                      {blockData[i]?.status !== 'saved' && (
+                        <div className={`flex justify-between items-center text-sm`}>
+                          <div className='flex gap-3'>
+                            {['green', 'red', 'blue', 'yellow'].map((color) => (
+                              <button
+                                key={color}
+                                className={`bg-[#1d1e20] rounded-md border-2 self-start mt-3 px-2 py-1 w-6 h-6 opacity-80 hover:opacity-100 ${allColors[color]}`}
+                                onClick={() => setBlockData({ ...blockData, [i]: { ...blockData[i], color } })}
+                              ></button>
+                            ))}
+                          </div>
+                          <div className='flex gap-3'>
+                            <button
+                              className='rounded-md self-end mt-3 px-2 py-1 bg-blue-600 hover:bg-blue-500'
+                              onClick={() => {
+                                setBlockData({ ...blockData, [i]: { ...blockData[i], status: 'saved' } });
+                              }}
+                            >
+                              Save
+                            </button>
+                            <button
+                              className='rounded-md self-end mt-3 px-2 py-1 bg-red-600 hover:bg-red-500'
+                              onClick={() => {
+                                setBlockData({ ...blockData, [i]: { ...blockData[i], text: '', status: '', color: 'gray' } });
+                                setClickedBlocks({ ...clickedBlocks, [i]: false });
+                              }}
+                            >
+                              Discard
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className=''>
+                      <svg className={`w-6 h-6 opacity-50 hover:opacity-90 transition-opacity duration-300 delay-300 ease-in-out ${clickedBlocks[i] ? 'opacity-0 invisible' : 'opacity-100 z-20'}`} onClick={() => {
+                        setBlockData({ ...blockData, [i]: { ...blockData[i], status: 'editing' } });
+                        setClickedBlocks({ ...clickedBlocks, [i]: true });
+                      }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+
+                  </Block>
+                  :
+                  <Block color={findTask(i + parseInt(startTime)).color}
+                    text={'First block without much info, maybe some day i can put more.'} />
+                }
+              </div>
+            ))}
+          </div>
+
+          
+          {<div className='flex flex-col gap-3 border-2 border-white'>
+              <div>
+                <Block color={'green'} text={'Test block green'} />
+              </div>
+              <div>
+                <Block color={'red'} text={'Test block red'} />
+              </div>
+              <div>
+                <Block color={'blue'} text={'Test block blue'} />
+              </div>
+              <div>
+                <Block color={'yellow'} text={'Test block yellow'} />
+              </div>
+              <div>
+                <Block color={'purple'} text={'Test block purple'} />
+              </div>
+              </div>}
+
+        </div>*/}
